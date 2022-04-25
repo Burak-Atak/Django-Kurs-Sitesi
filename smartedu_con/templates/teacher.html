@@ -41,35 +41,6 @@
 					</div>
 
                 </div><!-- end col -->
-				<div class="col-lg-3 col-12 right-single">
-					<div class="widget-search">
-						<div class="site-search-area">
-							<form method="get" id="site-searchform" action="#">
-								<div>
-									<input class="input-text form-control" name="search-k" id="search-k" placeholder="Search keywords..." type="text">
-									<input id="searchsubmit" value="Search" type="submit">
-								</div>
-							</form>
-						</div>
-					</div>
-					<div class="widget-categories">
-                    <h3 class="widget-title">Categories</h3>
-                    <ul>
-                        {% for category in categories %}
-                        <li><a href="{% url 'category_detail' category.slug %}">{{category.name}}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="widget-tags">
-                    <h3 class="widget-title">Search Tags</h3>
-                    <ul class="tags">
-                        {% for tag in tags %}
-                        <li><a href="{% url 'tag_detail' tag.slug %}">{% if tag.slug in request.path %} <b>{{tag.name}}</b> {% else %} {{tag.name}}</a></li>
-                        {% endif %}
-                        {% endfor %}
-                    </ul>
-                </div>
-				</div>
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->

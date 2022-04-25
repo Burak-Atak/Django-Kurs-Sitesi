@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="team-content">
-                        <h3 class="title">{{teacher.name}}</h3>
+                        <h3 class="title"><a href="{% url 'teacher_detail' teacher.id %}">{{teacher.name}}&raquo;</a></h3>
                         <span class="post">{{teacher.job}}</span>
                     </div>
                 </div>
